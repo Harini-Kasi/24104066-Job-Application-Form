@@ -12,9 +12,11 @@ function App(){
     setUsers([...users,user]);
     setUser("");
   }
+
   return(
     <div>
       <h1>JOB APPLICATION FORM</h1>
+      <p>Enter your details</p>
       <input
       type="text"
       value={name}
@@ -25,9 +27,17 @@ function App(){
       type="text"
       value={email}
       onChange={(e) => setEmail(e.target.value)}
-      placeholder='Enter you email'
+      placeholder='Enter your email'
       />
+      <input
+      type="text"
+      value={role}
+      onChange={(e) => setRole(e.target.value)}
+      placeholder="Enter your role"
+    />
       <button onClick={addUser}> Add User</button>
+      
+      <button onclick = {setResume}> Resume Upload</button>
     </div>
   );
 }
